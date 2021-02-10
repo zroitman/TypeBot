@@ -14,7 +14,6 @@ driver.get(type_url)
 start_race = wait.until(EC.element_to_be_clickable((By.LINK_TEXT, 'Enter a Typing Race')))
 start_race.click()
 
-
 time_count = -1
 while time_count != ":00":
     try:
@@ -48,8 +47,6 @@ for letter in rest_of_everything:
         input_keys.send_keys(letter)
     else:
         input_keys.send_keys(Keys.SPACE)
+    time.sleep(0.05)  # Change number to change typing speed
 
 print("DONE")
-
-
-
